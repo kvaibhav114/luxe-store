@@ -27,12 +27,18 @@ jobs:
         run: |
           npm install --legacy-peer-deps
           npm run build
+
         env:
           MONGODB_URI: ${{ secrets.MONGODB_URI }}
-
+          MONGODB_DB_NAME: ${{ secrets.MONGODB_DB_NAME }}
+          JWT_SECRET: ${{ secrets.JWT_SECRET }}
+          JWT_EXPIRES_IN: ${{ secrets.JWT_EXPIRES_IN }}
+          AZURE_OPENAI_ENDPOINT: ${{ secrets.AZURE_OPENAI_ENDPOINT }}
+          AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
+          AZURE_OPENAI_DEPLOYMENT_NAME: ${{ secrets.AZURE_OPENAI_DEPLOYMENT_NAME }}
+          AZURE_OPENAI_API_VERSION: ${{ secrets.AZURE_OPENAI_API_VERSION }}
 
       - name: Install OIDC Client from Core Package
-        # Note: This step now uses --legacy-peer-deps to prevent peer dependency errors
         run: npm install @actions/core@1.6.0 @actions/http-client --legacy-peer-deps
         
       - name: Get Id Token
