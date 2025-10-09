@@ -28,9 +28,10 @@ jobs:
           npm install --legacy-peer-deps
           npm run build
 
-      # The following steps are for OIDC/token setup and can remain as is.
+
       - name: Install OIDC Client from Core Package
-        run: npm install @actions/core@1.6.0 @actions/http-client
+        run: npm install @actions/core@1.6.0 @actions/http-client --legacy-peer-deps
+        
       - name: Get Id Token
         uses: actions/github-script@v6
         id: idtoken
@@ -49,7 +50,7 @@ jobs:
           skip_app_build: true 
           app_location: "/" # App source code path
           api_location: "" # Api source code path - optional
-          output_location: "build" # Built app content directory - optional (Ensure this matches your npm run build output)
+          output_location: "build" # Built app content directory - optional
           github_id_token: ${{ steps.idtoken.outputs.result }}
 
   close_pull_request_job:
