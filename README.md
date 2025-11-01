@@ -4,7 +4,7 @@
 
 **Luxe** is a full-featured, high-performance e-commerce platform built with **Next.js** and deployed entirely on **Azure cloud services**. It showcases a robust, scalable architecture with a focus on a seamless user experience, including cutting-edge **AI integration** for personalized product recommendations.
 
-<img width="1919" height="934" alt="image" src="https://github.com/user-attachments/assets/a0e9cfc3-8e59-4d5e-88ce-3871bbe76578" />
+<img width="1918" height="846" alt="image" src="https://github.com/user-attachments/assets/a6fdc60f-46e7-4388-9dc1-b974ae91965e" />
 
 This project demonstrates proficiency in building and deploying a complex, full-stack application leveraging serverless technologies, NoSQL databases, and modern front-end frameworks.
 
